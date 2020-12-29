@@ -2,6 +2,21 @@
   "name": "react-electron-sample",
   "version": "0.1.0",
   "private": true,
+  "main": "main.js",
+  "build": {
+    "extends": null,
+    "files": [
+      "build/**/*",
+      "*.js"
+    ],
+    "directories": {
+      "output": "dist_electron"
+    },
+    "win": {
+      "target": "portable"
+    }
+  },
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
@@ -11,11 +26,17 @@
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },
+  "devDependencies": {
+    "electron": "^11.1.1",
+    "electron-builder": "^22.9.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron:serve": "electron .",
+    "electron:build": "react-scripts build && electron-builder"
   },
   "eslintConfig": {
     "extends": [
