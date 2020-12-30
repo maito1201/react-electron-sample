@@ -1,10 +1,22 @@
-# Getting Started with Create React App
+# Getting Started with Create React App + Electron
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and electron-builder.
+
+React Hello World application is wrapped by Electron.
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm run electron:serve`
+
+Runs the app as a Electron application.\
+You must run `npm run build` to apply something you edit.
+
+### `npm run electron:build`
+
+Builds the Electron app for production to the `dist_electon` folder.\
+Before building section of the Electron app, `npm run build` scripts will be run automatically.
 
 ### `npm start`
 
